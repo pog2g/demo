@@ -1,0 +1,54 @@
+# spring配置
+spring:
+  application:
+    name: example
+  datasource:
+    url:  jdbc:mysql://localhost:3306/example?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  jackson:
+    time-zone:  Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      enabled: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+
+# 日志配置
+logging:
+  level:
+    root: debug
+
+
+
+# mybatis-plus配置
+mybatis-plus:
+  # mapper.xml路径
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  # 实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.example.demo.entity
+  global-config:
+    banner: false
+    db-config:
+      # 主键类型
+      id-type: uuid
+      # 字段插入判断策略
+      insert-strategy: not_empty
+      # 字段更新判断策略
+      update-strategy: not_null
+      # 字段查询判断策略
+      select-strategy: not_null
+  configuration:
+    # 配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
