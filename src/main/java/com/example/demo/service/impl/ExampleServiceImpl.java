@@ -20,12 +20,6 @@ import java.util.List;
 @Slf4j
 @Service
 public class ExampleServiceImpl extends ServiceImpl<ExampleMapper, ExampleEntity> implements ExampleService {
-    @Override
-    public void saveBatchSizeOne() throws RuntimeException {
-        log.debug("------------ExampleServiceImpl------------>saveBatchSizeOne:{}", "开始批量插入");
-        this.saveBatch(getBatch());
-        log.debug("------------ExampleServiceImpl------------>saveBatchSizeOne:{}", "批量插入完成");
-    }
 
     @Override
     public void saveBatch() throws RuntimeException {

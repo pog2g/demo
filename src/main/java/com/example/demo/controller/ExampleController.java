@@ -33,13 +33,7 @@ public class ExampleController {
     }
 
 
-    @ApiOperation(value = "批量插入BatchSize为1", notes = "批量插入BatchSize为1(v1.0.0)")
-    @PostMapping(value = "/inset/batch-one")
-    public void insertOne() {
-        service.saveBatchSizeOne();
-    }
-
-    @ApiOperation(value = "批量插入BatchSize为默认", notes = "批量插入BatchSize为默认(v1.0.0)")
+    @ApiOperation(value = "批量插入", notes = "批量插入(v1.0.0)")
     @PostMapping(value = "/inset/batch-default")
     public void insertDefault() {
         service.saveBatch();
