@@ -19,7 +19,7 @@
         <mysql-connector.version>8.0.16</mysql-connector.version>
         <swagger-ui.vsersion>2.9.2</swagger-ui.vsersion>
         <lombok.version>1.18.8</lombok.version>
-        <fastjson.version>1.2.58</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <druid-starter.version>1.1.18</druid-starter.version>
         <mybatis-plus-starter.version>3.2.0</mybatis-plus-starter.version>
     </properties>
